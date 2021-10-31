@@ -1,0 +1,22 @@
+{
+  "name": "node-hikvision-motion-detection",
+  "version": "0.0.1",
+  "description": "Hikvision Motion Detection HTTP API Module",
+  "main": "index.ts",
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "events": "^3.3.0",
+    "net": "^1.0.2",
+    "request": "^2.88.2",
+    "xml2js": "^0.4.23"
+  },
+  "author": "Ibrahim Khalid",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "@types/node": "^16.11.6",
+    "@types/xml2js": "^0.4.9"
+  },
+  "scripts": {
+    "copy": "cp config.sample.json config.json"
+  }
+}

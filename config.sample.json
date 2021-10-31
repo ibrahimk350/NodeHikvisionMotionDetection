@@ -1,0 +1,18 @@
+{
+    "zoneMinderIP": "{YOUR_ZONEMINDER_IP}",
+    "zoneMinderPort": "6802",
+    "zoneMinderGroup": [
+        {
+            "name": "{CAMERA NAME}",
+            "camera": {
+                "ip": "{HIKVISION_CAMERA_IP}",
+                "port": "80",
+                "username": "{CAMERA_USERNAME}",
+                "password": "{CAMERA_PASSWORD}"
+            },
+            "monitor": {
+                "id": "{MONITOR_ID_FOR_CAMERA_IN_ZONEMINDER}"
+            }
+        }
+    ]
+}
