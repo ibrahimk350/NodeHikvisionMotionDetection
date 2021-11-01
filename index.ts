@@ -3,7 +3,7 @@ import { hikvisionClass } from './classes/hikvisionClass';
 import { execFile } from 'child_process';
 
 // Process Config File
-var config = JSON.parse(fs.readFileSync(__dirname + '/config.json', 'utf8'));
+var config = JSON.parse(fs.readFileSync(__dirname + '/../config.json', 'utf8'));
 var zoneMinderIP = config['zoneMinderIP'] ? config['zoneMinderIP'] : 'localhost';
 var zoneMinderPort = config['zoneMinderPort'] ? config['zoneMinderPort'] : '6802';
 var zoneMinderGroup = config['zoneMinderGroup'];
