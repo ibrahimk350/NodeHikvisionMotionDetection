@@ -1,11 +1,11 @@
 import * as fs from 'fs';
-import { hikvisionClass } from './hikvisionClass';
+import { hikvisionClass } from './classes/hikvisionClass';
 import { execFile } from 'child_process';
 
 // Process Config File
 var config = JSON.parse(fs.readFileSync(__dirname + '/config.json', 'utf8'));
-var zoneMinderIP = config['zoneMinderIP'];
-var zoneMinderPort = config['zoneMinderPort'];
+var zoneMinderIP = config['zoneMinderIP'] ? config['zoneMinderIP'] : 'localhost';
+var zoneMinderPort = config['zoneMinderPort'] ? config['zoneMinderPort'] : '6802';
 var zoneMinderGroup = config['zoneMinderGroup'];
 
 // Setup Cameras
@@ -50,7 +50,7 @@ function prepareMessage(
 ) {
 	execFile('/bin/sh', 
 		[
-			'./sendMessage.sh', 
+			'./scripts/sendMessage.sh', 
 			`${ZoneMinderIP}`, 
 			`${ZoneMinderPort}`, 
 			`${MonitorId}`, 
