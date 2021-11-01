@@ -2,7 +2,7 @@
 This repo is for Hikvision Camera's in-built motion detection and sending alerts to ZoneMinder.
 
 ### Features
-- Uses Hikvision in-built motion detection and sends alert to zoneminder to start/stop recording.
+- Uses Hikvision in-built motion detection and sends alerts to zoneminder to `start/stop` recording.
 - The in-built motion detection is definitely much better to use and takes the load off the zoneminder server.
 - Can be registered as a service to run the background and start/stop automatically with the system.
 - Comes with a script which will actively monitor the service.
