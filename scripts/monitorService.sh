@@ -5,11 +5,11 @@
 #######################################
 # Service
 service=hikvision-motion-detection
-checkStatus=`ps -eaf | grep -i $service |sed '/^$/d' | wc -l`
+checkStatus=`systemctl is-active $service`
 serviceTag=false
 
 # Check if running
-if [[ $checkStatus > 1 ]]
+if [[ $checkStatus == "active" ]]
 then
 	serviceTag=true;
 	serviceStatus="$service is running.\n"
@@ -18,7 +18,7 @@ else
 	serviceStatus="$service service is not running.\n"
 fi
 
-if [ !$serviceTag ]
+if [ $serviceTag == "false" ]
 then
     # {FOR YOU TO DO}
     # You can log it to a logger or
